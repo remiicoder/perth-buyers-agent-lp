@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -48,7 +48,18 @@
           <a href="#faq">FAQ</a>
         </nav>
 
-        <a href="#contact" class="btn btn--primary btn--sm header__cta">Book a free call</a>
+        <div class="site-header__actions">
+          <a
+            href="https://lp.nichebuyersagents.com.au/call"
+            class="phone-reveal"
+            rel="noopener noreferrer"
+            aria-label="0412 504 5… click to reveal phone number"
+          >
+            <span class="phone-reveal__number">0412 504 5…</span>
+            <span class="phone-reveal__hint">(click to reveal)</span>
+          </a>
+          <a href="https://lp.nichebuyersagents.com.au/consult" class="btn btn--primary btn--sm header__cta">Book a free call</a>
+        </div>
 
         <button
           class="nav-toggle"
@@ -68,7 +79,16 @@
           <a href="#who">Who I help</a>
           <a href="#reviews">Reviews</a>
           <a href="#faq">FAQ</a>
-          <a href="#contact" class="btn btn--primary mobile-nav__cta">Book a free call</a>
+          <a
+            href="https://lp.nichebuyersagents.com.au/call"
+            class="phone-reveal phone-reveal--block mobile-nav__phone"
+            rel="noopener noreferrer"
+            aria-label="0412 504 5… click to reveal phone number"
+          >
+            <span class="phone-reveal__number">0412 504 5…</span>
+            <span class="phone-reveal__hint">(click to reveal)</span>
+          </a>
+          <a href="https://lp.nichebuyersagents.com.au/consult" class="btn btn--primary mobile-nav__cta">Book a free call</a>
         </div>
       </div>
     </header>
@@ -77,18 +97,12 @@
       <!-- ========================= HERO ========================= -->
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero__media" aria-hidden="true">
-          <picture>
-            <source
-              media="(min-width: 900px)"
-              srcset="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2200&q=80"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80"
-              alt=""
-              loading="eager"
-              fetchpriority="high"
-            />
-          </picture>
+          <img
+            src="images/Brisbane Buyers Agent.png"
+            alt=""
+            loading="eager"
+            fetchpriority="high"
+          />
           <div class="hero__media-overlay"></div>
         </div>
 
@@ -96,8 +110,8 @@
           <div class="hero__content">
             <p class="eyebrow eyebrow--light">Brisbane's Southern Suburbs Specialist</p>
             <h1 id="hero-title" class="hero__title">
-              I find the homes you keep<br />
-              losing to <em>someone else.</em>
+              I buy the homes you keep
+              losing to <em>someone else</em>
             </h1>
             <p class="hero__lede">
               I've spent 15 years buying property across Brisbane's southern suburbs.
@@ -105,11 +119,11 @@
               properties get sold before anyone lists them.
             </p>
             <p class="hero__line">
-              The seller has their own agent. <strong>You should have someone, too.</strong>
+              The seller has their own agent. <strong>You should have someone too!</strong>
             </p>
 
             <div class="hero__cta">
-              <a href="#contact" class="btn btn--primary btn--lg">Book a Free Call with Leanne</a>
+              <a href="https://lp.nichebuyersagents.com.au/consult" class="btn btn--primary btn--lg">Book a Free Call with Leanne</a>
               <span class="hero__cta-note">No obligation. Just an honest conversation.</span>
             </div>
           </div>
@@ -150,7 +164,7 @@
           <div class="pain__copy">
             <p class="eyebrow">The reality</p>
             <h2 id="pain-title" class="section-title">
-              You're doing everything right.<br />
+              You're doing everything right<br />
               <em>So why don't you have a house?</em>
             </h2>
             <div class="pain__body">
@@ -166,32 +180,56 @@
                 Meanwhile, the suburb you had your eye on six months ago has moved out
                 of your budget.
               </p>
-
-              <div class="pain__quote">
-                <p>
-                  Here's the problem: <strong>Southern Brisbane runs on relationships.</strong>
-                  Off-market calls between agents who trust each other. Conversations
-                  that buyers on the portals never hear. I've spent 15 years building
-                  those relationships. When a property is coming up, I get a call.
-                </p>
-              </div>
             </div>
           </div>
 
           <aside class="pain__visual">
             <figure class="pain__photo">
               <img
-                src="assets/leanne-signing.jpg"
+                src="images/home-walkthrough.avif"
                 onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1664575196412-ed801e8333a1?auto=format&fit=crop&w=1200&q=80';"
-                alt="Leanne reviewing a contract with a client at the kitchen counter"
+                alt="Walking through a home during an inspection"
                 loading="lazy"
               />
               <figcaption class="pain__photo-caption">
-                <span class="pain__photo-tag">On your side of the table</span>
-                <span class="pain__photo-name">Leanne · 15+ years buying in Brisbane's south</span>
+                <span class="pain__photo-tag">Leanne Gibbs</span>
+                <span class="pain__photo-name">15+ years buying in Brisbane's south</span>
               </figcaption>
             </figure>
           </aside>
+        </div>
+      </section>
+
+      <!-- ========================= HERO REVIEW ========================= -->
+      <section class="hero-review" aria-labelledby="hero-review-title">
+        <div class="container">
+          <div class="hero-review__card">
+            <div class="hero-review__aside">
+              <figure class="hero-review__portrait">
+                <img
+                  src="images/yuka-kanno.png"
+                  alt="Portrait of Yuka Kanno"
+                  width="128"
+                  height="128"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+              <p class="hero-review__byline">
+                <span class="hero-review__name">Yuka Kanno</span>
+              </p>
+            </div>
+            <div class="hero-review__content">
+              <h2 id="hero-review-title" class="hero-review__title">“I stopped missing out”</h2>
+              <blockquote class="hero-review__quote">
+                <p>
+                  I have been missing out on so many properties until I reached out to Leanne at
+                  Niche Buyers Agents. She has been fantastic to deal with and very knowledgeable,
+                  making the process seamless! Highly recommend.
+                </p>
+              </blockquote>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -201,7 +239,7 @@
           <header class="section-header section-header--center">
             <p class="eyebrow">How it works</p>
             <h2 id="how-title" class="section-title section-title--center">
-              Four steps. <em>One outcome.</em>
+              Four steps. <em>One outcome</em>
             </h2>
           </header>
 
@@ -254,8 +292,7 @@
           <header class="section-header">
             <p class="eyebrow">Where we buy</p>
             <h2 id="areas-title" class="section-title">
-              Inner South · Bayside · Western Suburbs<br />
-              <em>Olympic Legacy Zone</em>
+              South East <em>Brisbane</em>
             </h2>
             <p class="section-lead">
               I know these suburbs the way most people know their own street.
@@ -311,13 +348,12 @@
                   <path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18" />
                 </svg>
               </div>
-              <h3 class="area-card__title">Olympic Legacy Zone</h3>
-              <p class="area-card__suburbs">Sunnybank · Eight Mile Plains</p>
+              <h3 class="area-card__title">Logan region</h3>
+              <p class="area-card__suburbs">Springwood · Beenleigh · Eight Mile Plains</p>
               <p class="area-card__copy">
-                Changing faster than the listings reflect. I know which pockets to buy
+               I know which pockets to buy
                 into now and which to skip.
               </p>
-              <span class="area-card__tag">2032 growth corridor</span>
             </article>
           </div>
         </div>
@@ -329,8 +365,7 @@
           <header class="who__header">
             <p class="eyebrow">Who I help</p>
             <h2 id="who-title" class="section-title">
-              Five buyers I work with<br />
-              <em>most often.</em>
+              Five buyers I work with <em>most</em>
             </h2>
             <p class="section-lead">
               Different briefs, same problem: the right home keeps slipping through your
@@ -402,37 +437,37 @@
         <div class="container why__inner">
           <div class="why__media">
             <img
-              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1200&q=80"
+              src="images/portrait.avif"
               alt="Leanne, Niche Buyers Agents"
               loading="lazy"
             />
-            <span class="why__caption">Leanne · Principal Buyer's Agent</span>
+            <span class="why__caption">Leanne Gibbs · Licensed Buyer's Agent</span>
           </div>
 
           <div class="why__copy">
             <p class="eyebrow">Why me</p>
             <h2 id="why-title" class="section-title">
               One objective.<br />
-              <em>Yours.</em>
+              <em>Yours</em>
             </h2>
 
             <ul class="why__list">
               <li>
-                <h3>Buyers only.</h3>
+                <h3>Buyers only</h3>
                 <p>
                   I only work for buyers. No listings. No referral fees. No developer
                   relationships. One objective.
                 </p>
               </li>
               <li>
-                <h3>I know this patch specifically.</h3>
+                <h3>I know this patch specifically</h3>
                 <p>
                   Southern suburbs only. A decade of the same streets, the same agents,
                   the same pockets. That knowledge can't be shortcut.
                 </p>
               </li>
               <li>
-                <h3>The off-market access is real.</h3>
+                <h3>The off-market access is real</h3>
                 <p>
                   My off-market rate is what it looks like when local agents actually
                   call you before they list. It comes from years of closing deals
@@ -441,7 +476,7 @@
               </li>
             </ul>
 
-            <a href="#contact" class="btn btn--primary btn--lg why__cta">Book a free call</a>
+            <a href="https://lp.nichebuyersagents.com.au/consult" class="btn btn--primary btn--lg why__cta">Book a free call</a>
           </div>
         </div>
       </section>
@@ -452,7 +487,7 @@
           <header class="section-header section-header--center">
             <p class="eyebrow">Reviews</p>
             <h2 id="reviews-title" class="section-title section-title--center">
-              What clients say <em>after settlement.</em>
+              What clients say <em>after settlement</em>
             </h2>
           </header>
 
@@ -466,76 +501,267 @@
             <div class="slider__track" id="sliderTrack">
               <article class="review">
                 <div class="review__stars" aria-label="5 out of 5 stars">★★★★★</div>
-                <blockquote>
-                  We had made the decision for our family to move and it was a massive
-                  lifestyle change for us. The care, advice and attention to detail we
-                  received from Niche could not be faulted — and it wasn't just about
-                  finding us the best home for our family, it was even where to shop,
-                  great schools and surf spots.
-                </blockquote>
+                <div class="review__quote-wrap">
+                  <blockquote class="review__blockquote" id="review-quote-1">
+                    We got in touch with Leanne when we were living in Brisbane and wanted to
+                    purchase a property on the Gold Coast. Leanne has so many connections in
+                    the real estate industry and she helped us find the property we had
+                    envisioned. Leanne was fantastic during the negotiation stage, she won us
+                    our home. We moved in earlier this year and couldn't have done it without
+                    her. Thank you so much Leanne!
+                  </blockquote>
+                </div>
+                <button
+                  type="button"
+                  class="review__toggle"
+                  hidden
+                  aria-expanded="false"
+                  aria-controls="review-quote-1"
+                >
+                  Read more
+                </button>
                 <footer>
-                  <strong>Michael</strong>
-                  <span>Family relocation</span>
+                  <div class="review__footer-head">
+                    <strong>Cal</strong>
+                    <span class="review__verified-badge">
+                      <svg class="review__verified-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                        <circle cx="8" cy="8" r="6.75" stroke="currentColor" stroke-width="1.25" />
+                        <path
+                          d="M4.75 8.25 7 10.5 11.25 5.25"
+                          stroke="currentColor"
+                          stroke-width="1.25"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      Verified buyer
+                    </span>
+                  </div>
+                  <span class="review__footer-meta">Gold Coast purchase</span>
                 </footer>
               </article>
 
               <article class="review">
                 <div class="review__stars" aria-label="5 out of 5 stars">★★★★★</div>
-                <blockquote>
-                  We just kept on missing out on buying. When Niche found our property
-                  they were very strategic in how to put together the offer and despite
-                  multiple offers, ours got accepted. After the deal was done, we found
-                  out from the agent that our offer wasn't even the highest — so double
-                  win for us.
-                </blockquote>
+                <div class="review__quote-wrap">
+                  <blockquote class="review__blockquote" id="review-quote-2">
+                    Leanne was instrumental in the successful purchase of my home. Her deep
+                    understanding of the sales process and legal documentation, strong
+                    communication, and proactive approach gave me confidence every step of the
+                    way. She went above and beyond—negotiating on my behalf and finding
+                    opportunities before properties hit the market. Her down to earth approach
+                    with me helped minimise the stress to the buying process. I highly recommend
+                    her and will definitely return to her for all my future real estate needs.
+                  </blockquote>
+                </div>
+                <button
+                  type="button"
+                  class="review__toggle"
+                  hidden
+                  aria-expanded="false"
+                  aria-controls="review-quote-2"
+                >
+                  Read more
+                </button>
                 <footer>
-                  <strong>Janelle &amp; Peter</strong>
-                  <span>Home buyers</span>
+                  <div class="review__footer-head">
+                    <strong>Marc C</strong>
+                    <span class="review__verified-badge">
+                      <svg class="review__verified-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                        <circle cx="8" cy="8" r="6.75" stroke="currentColor" stroke-width="1.25" />
+                        <path
+                          d="M4.75 8.25 7 10.5 11.25 5.25"
+                          stroke="currentColor"
+                          stroke-width="1.25"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      Verified buyer
+                    </span>
+                  </div>
+                  <span class="review__footer-meta">Home buyer</span>
                 </footer>
               </article>
 
               <article class="review">
                 <div class="review__stars" aria-label="5 out of 5 stars">★★★★★</div>
-                <blockquote>
-                  My budget wasn't very big but Niche made us feel like we were buying a
-                  multi-million dollar home. Nothing was too much trouble and every time
-                  we rang they picked up or got back to us within the hour. They took the
-                  time to explain everything and we felt like they were as happy as we
-                  were to buy our first home.
-                </blockquote>
+                <div class="review__quote-wrap">
+                  <blockquote class="review__blockquote" id="review-quote-3">
+                    I had a fantastic experience working with Leanne. She was extremely
+                    knowledgeable about the real estate industry and guided me through every step
+                    of the buying process. She provided me with short lists of properties based
+                    on my specifications and attended open houses taking videos, which was
+                    incredibly helpful given I couldn't attend in person. Leanne's current market
+                    knowledge enabled me to purchase my property at a fair price. Leanne made a
+                    stressful process easier to navigate. If you are thinking of purchasing give
+                    Leanne at Niche a call, you won't regret it!
+                  </blockquote>
+                </div>
+                <button
+                  type="button"
+                  class="review__toggle"
+                  hidden
+                  aria-expanded="false"
+                  aria-controls="review-quote-3"
+                >
+                  Read more
+                </button>
                 <footer>
-                  <strong>Rochelle</strong>
-                  <span>First home buyer</span>
+                  <div class="review__footer-head">
+                    <strong>Sandra</strong>
+                    <span class="review__verified-badge">
+                      <svg class="review__verified-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                        <circle cx="8" cy="8" r="6.75" stroke="currentColor" stroke-width="1.25" />
+                        <path
+                          d="M4.75 8.25 7 10.5 11.25 5.25"
+                          stroke="currentColor"
+                          stroke-width="1.25"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      Verified buyer
+                    </span>
+                  </div>
+                  <span class="review__footer-meta">Buyer</span>
                 </footer>
               </article>
 
               <article class="review">
                 <div class="review__stars" aria-label="5 out of 5 stars">★★★★★</div>
-                <blockquote>
-                  As an investor who has bought multiple properties, I felt Niche got my
-                  buying brief right from the get go. Their service was prompt and
-                  information spot on. I bought a property with development potential
-                  quickly and off-market. I would highly recommend them.
-                </blockquote>
+                <div class="review__quote-wrap">
+                  <blockquote class="review__blockquote" id="review-quote-4">
+                    Leanne knows how to navigate buying property like the back of her hand! Her
+                    knowledge and experience in the real estate market was priceless. When it
+                    came to the crunch her guidance and nous got me the property I wanted and
+                    her kind support kept my nerves in check. Thank you so much Leanne!
+                  </blockquote>
+                </div>
+                <button
+                  type="button"
+                  class="review__toggle"
+                  hidden
+                  aria-expanded="false"
+                  aria-controls="review-quote-4"
+                >
+                  Read more
+                </button>
                 <footer>
-                  <strong>Lionel</strong>
-                  <span>Investor</span>
+                  <div class="review__footer-head">
+                    <strong>Anna Sheahan</strong>
+                    <span class="review__verified-badge">
+                      <svg class="review__verified-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                        <circle cx="8" cy="8" r="6.75" stroke="currentColor" stroke-width="1.25" />
+                        <path
+                          d="M4.75 8.25 7 10.5 11.25 5.25"
+                          stroke="currentColor"
+                          stroke-width="1.25"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      Verified buyer
+                    </span>
+                  </div>
+                  <span class="review__footer-meta">Buyer</span>
                 </footer>
               </article>
 
               <article class="review">
                 <div class="review__stars" aria-label="5 out of 5 stars">★★★★★</div>
-                <blockquote>
-                  Having worked closely with Niche on a property I was selling, I'm
-                  thoroughly impressed with their approach. They demonstrated a deep
-                  understanding of what defines a quality home. Communication and
-                  negotiation were outstanding. If you're seeking a buyer's agent who
-                  brings trust, straightforwardness and expertise — Niche is your
-                  number one choice.
-                </blockquote>
+                <div class="review__quote-wrap">
+                  <blockquote class="review__blockquote" id="review-quote-5">
+                    <p>
+                      We recently used Leanne from Niche Buyers Agent to secure an investment
+                      property in Brisbane, and we couldn't recommend her more highly! As overseas
+                      buyers, we were nervous about navigating the process from afar, but Leanne
+                      made it absolutely seamless. From day one, she was incredibly
+                      proactive—scouting options, handling all the upfront investigations, and
+                      sharing her deep knowledge of the Brisbane market to guide us toward the
+                      best opportunities.
+                    </p>
+                    <p>
+                      What stood out was her flexibility and willingness to go the extra mile.
+                      She tailored everything to our schedule and needs, and in a tough market,
+                      she managed to snag us an off-market gem within just 8 weeks. Even
+                      post-purchase, she's been a lifesaver, coordinating settlement details and
+                      stepping in with project management to prep the property for tenants. It's
+                      rare to find such dedicated, hands-on support that turns a stressful buy
+                      into a breeze. If you're investing in QLD, Leanne is your go-to—pure gold!
+                    </p>
+                  </blockquote>
+                </div>
+                <button
+                  type="button"
+                  class="review__toggle"
+                  hidden
+                  aria-expanded="false"
+                  aria-controls="review-quote-5"
+                >
+                  Read more
+                </button>
                 <footer>
-                  <strong>Jackson Wales</strong>
-                  <span>Ray White</span>
+                  <div class="review__footer-head">
+                    <strong>Ranjeewani Wijayadasa</strong>
+                    <span class="review__verified-badge">
+                      <svg class="review__verified-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                        <circle cx="8" cy="8" r="6.75" stroke="currentColor" stroke-width="1.25" />
+                        <path
+                          d="M4.75 8.25 7 10.5 11.25 5.25"
+                          stroke="currentColor"
+                          stroke-width="1.25"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      Verified buyer
+                    </span>
+                  </div>
+                  <span class="review__footer-meta">Overseas investor</span>
+                </footer>
+              </article>
+
+              <article class="review">
+                <div class="review__stars" aria-label="5 out of 5 stars">★★★★★</div>
+                <div class="review__quote-wrap">
+                  <blockquote class="review__blockquote" id="review-quote-6">
+                    I had such a positive experience working with Leanne. She was incredibly
+                    patient, kind, and supportive throughout the entire process. As a first-time
+                    investor, I had a lot of questions and she never made me feel rushed or
+                    overwhelmed. Her guidance was thoughtful and steady, and I always felt like
+                    she had my best interests at heart. I'm so grateful for her help in finding
+                    the right property and for making what could have been a stressful journey
+                    feel calm and manageable. Highly recommend!
+                  </blockquote>
+                </div>
+                <button
+                  type="button"
+                  class="review__toggle"
+                  hidden
+                  aria-expanded="false"
+                  aria-controls="review-quote-6"
+                >
+                  Read more
+                </button>
+                <footer>
+                  <div class="review__footer-head">
+                    <strong>Raha Naraghi</strong>
+                    <span class="review__verified-badge">
+                      <svg class="review__verified-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                        <circle cx="8" cy="8" r="6.75" stroke="currentColor" stroke-width="1.25" />
+                        <path
+                          d="M4.75 8.25 7 10.5 11.25 5.25"
+                          stroke="currentColor"
+                          stroke-width="1.25"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      Verified buyer
+                    </span>
+                  </div>
+                  <span class="review__footer-meta">First-time investor</span>
                 </footer>
               </article>
             </div>
@@ -564,13 +790,13 @@
             <p class="eyebrow">Questions</p>
             <h2 id="faq-title" class="section-title">
               The honest answers<br />
-              <em>most people want.</em>
+              <em>most people want</em>
             </h2>
             <p class="section-lead">
               Still wondering if a buyer's agent is right for you? Here's what I'm asked
               most.
             </p>
-            <a href="#contact" class="btn btn--ghost faq__cta">Ask a different question</a>
+            <a href="https://lp.nichebuyersagents.com.au/consult" class="btn btn--ghost faq__cta">Ask a different question</a>
           </header>
 
           <div class="faq__list">
@@ -581,9 +807,9 @@
               </summary>
               <div class="faq__answer">
                 <p>
-                  You can. But the person on the other side does this every week, and
-                  their job is to get the highest price for someone else. I can assure
-                  you'll never overpay.
+                  You could, but it's risky... as the person on the other side does this every week, and
+                  their job is to get the highest price for someone else. I assure
+                  you'll never overpay buying a property, when I negotiate on your behalf.
                 </p>
               </div>
             </details>
@@ -646,7 +872,7 @@
         <div class="container final__inner">
           <p class="eyebrow eyebrow--light">Ready when you are</p>
           <h2 id="final-title" class="final__title">
-            Let's find your home.
+            Let's find your home
           </h2>
           <p class="final__lede">
             Brisbane's south keeps moving. I have a limited number of client spots open
@@ -669,12 +895,12 @@
         <div class="site-footer__brand">
           <a href="#" class="brand brand--light" aria-label="Niche Buyers Agents — home">
             <img
-              src="assets/logo.png"
-              onerror="this.onerror=null;this.src='assets/logo.svg';"
+              src="images/logo_white_text.png"
+              onerror="this.onerror=null;this.src='images/logo_white_text.svg';"
               alt="Niche Buyers' Agents"
-              class="brand__logo brand__logo--light"
-              width="180"
-              height="58"
+              class="brand__logo brand__logo--footer"
+              width="234"
+              height="75"
             />
           </a>
           <p class="site-footer__tag">
@@ -704,6 +930,17 @@
           <div class="site-footer__col">
             <h4>Contact</h4>
             <ul>
+              <li>
+                <a
+                  href="https://lp.nichebuyersagents.com.au/call"
+                  class="phone-reveal phone-reveal--footer"
+                  rel="noopener noreferrer"
+                  aria-label="0412 504 5… click to reveal phone number"
+                >
+                  <span class="phone-reveal__number">0412 504 5…</span>
+                  <span class="phone-reveal__hint">(click to reveal)</span>
+                </a>
+              </li>
               <li><a href="#contact">Book a free call</a></li>
               <li>QLD Licence No. 4694723</li>
               <li>

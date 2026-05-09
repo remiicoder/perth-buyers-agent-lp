@@ -109,6 +109,44 @@
 
     updateDots();
 
+    const initReviewTruncation = () => {
+      const LINE_COUNT = 6;
+      slides.forEach((review) => {
+        const wrap = $(".review__quote-wrap", review);
+        const bq = $(".review__blockquote", review);
+        const btn = $(".review__toggle", review);
+        if (!wrap || !bq || !btn) return;
+
+        const cs = getComputedStyle(wrap);
+        const lhRaw = cs.lineHeight;
+        const fs = parseFloat(cs.fontSize);
+        const lineHeightPx =
+          lhRaw === "normal" || lhRaw === "" ? fs * 1.55 : parseFloat(lhRaw);
+        const capPx = lineHeightPx * LINE_COUNT;
+
+        const natural = wrap.scrollHeight;
+
+        if (natural > capPx + 8) {
+          review.classList.add("review--truncatable");
+          btn.hidden = false;
+          const qid = bq.getAttribute("id");
+          if (qid) btn.setAttribute("aria-controls", qid);
+
+          btn.addEventListener("click", () => {
+            const expanded = review.classList.toggle("is-expanded");
+            btn.textContent = expanded ? "Read less" : "Read more";
+            btn.setAttribute("aria-expanded", String(expanded));
+          });
+        }
+      });
+    };
+
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(() => window.requestAnimationFrame(initReviewTruncation));
+    } else {
+      window.requestAnimationFrame(initReviewTruncation);
+    }
+
     /* Auto-advance, pause on hover/focus */
     let auto = window.setInterval(() => goTo(getActiveIndex() + 1), 7000);
     const stopAuto = () => {
