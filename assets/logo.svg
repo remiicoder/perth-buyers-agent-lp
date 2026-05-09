@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 116" role="img" aria-label="Niche Buyers' Agents">
+  <style>
+    .nb-word { font: 500 italic 88px "Fraunces", "Cormorant Garamond", Georgia, serif; fill: #1a1a1a; letter-spacing: -0.02em; }
+    .nb-tag { font: 500 14px "Inter", system-ui, sans-serif; fill: #6b6155; letter-spacing: 0.28em; text-transform: uppercase; }
+  </style>
+  <circle cx="49" cy="13" r="9" fill="#cc7a4f"/>
+  <text x="0" y="76" class="nb-word">niche</text>
+  <text x="2" y="106" class="nb-tag">BUYERS' AGENTS</text>
+</svg>

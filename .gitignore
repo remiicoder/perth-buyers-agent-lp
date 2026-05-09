@@ -1,0 +1,30 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node (in case anyone adds tooling later)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnp.*
+package-lock.json
+yarn.lock
+
+# Build artefacts
+dist/
+build/
+.cache/
+
+# Env / secrets
+.env
+.env.*
+!.env.example
