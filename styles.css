@@ -383,10 +383,28 @@ h6 {
 .phone-reveal:hover {
   color: var(--terracotta);
 }
+.phone-reveal__line {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+}
+.phone-reveal__icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  color: inherit;
+}
+.phone-reveal__icon svg {
+  width: 15px;
+  height: 15px;
+  display: block;
+}
 .phone-reveal__number {
   font-weight: 500;
   font-variant-numeric: tabular-nums;
   letter-spacing: 0.02em;
+  line-height: 1.2;
 }
 .phone-reveal__hint {
   font-size: 11px;
@@ -398,6 +416,10 @@ h6 {
 }
 .phone-reveal--block {
   align-items: flex-start;
+}
+.phone-reveal--block .phone-reveal__hint,
+.phone-reveal--footer .phone-reveal__hint {
+  padding-left: 21px;
 }
 .phone-reveal--footer {
   align-items: flex-start;
@@ -686,6 +708,10 @@ section {
 .pain__body p + p {
   margin-top: 16px;
 }
+.pain__cta {
+  margin-top: 32px;
+}
+
 .pain__quote {
   margin-top: 32px;
   padding: 28px 32px;
@@ -896,6 +922,10 @@ section {
   height: 100%;
   border: 0;
 }
+.video-section__cta {
+  margin-top: clamp(28px, 4vw, 40px);
+  text-align: center;
+}
 
 /* -------------------- How it works -------------------- */
 .how {
@@ -947,7 +977,7 @@ section {
 }
 .step__num {
   font-family: var(--serif);
-  font-size: 14px;
+  font-size: 21px;
   font-weight: 500;
   letter-spacing: 0.18em;
   color: var(--terracotta);
