@@ -26,9 +26,9 @@ footer block of index.html.
 PHOTOGRAPHY
 ===========
 
-  • leanne-signing.jpg   → used in the PAIN section (right column).
+  • anna-signing.jpg   → used in the PAIN section (right column).
                            Portrait orientation (4:5), ~1200×1500px.
-                           E.g. Leanne signing the contract with
+                           E.g. Anna signing the contract with
                            a client at the kitchen counter.
 
   (Existing placeholders still pulled from Unsplash CDN for the
@@ -41,5 +41,5 @@ breaks.
 
 Suggested filenames for the rest of the brand photography:
 
-  • hero-brisbane.jpg     → hero background (landscape)
-  • leanne-portrait.jpg   → "Why me" section (portrait 4:5)
+  • hero-perth.jpg     → hero background (landscape)
+  • anna-portrait.jpg   → "Why me" section (portrait 4:5)

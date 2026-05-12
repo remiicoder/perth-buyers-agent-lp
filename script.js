@@ -190,6 +190,7 @@
     ".avatar",
     ".why__media",
     ".why__copy",
+    ".price-tile",
     ".review",
     ".faq__item",
     ".final__inner > *"

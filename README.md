@@ -1,6 +1,6 @@
 # Niche Buyers Agents — Landing Page
 
-A modern, editorial, conversion-focused landing page for Leanne — Brisbane's
+A modern, editorial, conversion-focused landing page for Anna — Perth's
 southern suburbs buyer's agent.
 
 > Trusted · Respected · Experienced
@@ -33,7 +33,7 @@ Or simply double-click `index.html`.
 
 ## Sections (matches the brief)
 
-1. **Hero** — Brisbane's Southern Suburbs Specialist  
+1. **Hero** — Perth's Southern Suburbs Specialist  
 2. **Trust banner** — 200+ homes · $47K avg saving · 38% off-market · 15+ years
 3. **Pain** — "You're doing everything right. So why don't you have a house?"
 4. **How it works** — Four steps. One outcome.
@@ -55,26 +55,26 @@ Or simply double-click `index.html`.
 
 ## Swap in real photos
 
-The page currently uses Unsplash placeholders. Replace these to use Leanne's
+The page currently uses Unsplash placeholders. Replace these to use Anna's
 actual photography (the images you sent in the brief):
 
 | Where | Element in `index.html` | Suggested photo |
 | --- | --- | --- |
-| Hero background | `.hero__media img` (and `<source>`) | The Brisbane bayside / cafe / Story Bridge image |
-| Why me — portrait | `.why__media img` | Headshot of Leanne with the laptop / pearls |
+| Hero background | `.hero__media img` (and `<source>`) | The Perth bayside / cafe / Story Bridge image |
+| Why me — portrait | `.why__media img` | Headshot of Anna with the laptop / pearls |
 
 Drop the files into an `assets/` folder next to `index.html` and update the
 `src` (and `srcset`) paths, e.g.:
 
 ```html
-<source media="(min-width: 900px)" srcset="assets/hero-brisbane@2x.jpg" />
-<img src="assets/hero-brisbane.jpg" alt="Brisbane's southern suburbs" />
+<source media="(min-width: 900px)" srcset="assets/hero-perth@2x.jpg" />
+<img src="assets/hero-perth.jpg" alt="Perth's southern suburbs" />
 ```
 
 For the portrait:
 
 ```html
-<img src="assets/leanne-portrait.jpg" alt="Leanne, Niche Buyers Agents" />
+<img src="assets/anna-portrait.jpg" alt="Anna, Niche Buyers Agents" />
 ```
 
 You can also swap in additional editorial photos (signing the contract, walking
