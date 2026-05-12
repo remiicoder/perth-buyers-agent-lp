@@ -3,6 +3,7 @@
    - Sticky header shadow on scroll
    - Mobile nav toggle
    - Reviews slider (snap-scroll + prev/next + dots)
+   - Case studies slider (property slides + secure badges)
    - Reveal-on-scroll animations
    - FAQ: only one open at a time (accordion behaviour)
 ===================================================================== */
@@ -168,6 +169,89 @@
     });
   }
 
+  /* ------------------ Case studies slider ------------------ */
+  const csSlider = $("#caseStudiesSlider");
+  if (csSlider) {
+    const csTrack = $("#caseStudiesTrack", csSlider);
+    const csPrev = $("#caseStudiesPrev", csSlider);
+    const csNext = $("#caseStudiesNext", csSlider);
+    const csDotsWrap = $("#caseStudiesDots", csSlider);
+    const csSlides = $$(".case-slide", csTrack);
+
+    if (csTrack && csPrev && csNext && csDotsWrap && csSlides.length) {
+      csSlides.forEach((_, i) => {
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.className = "slider__dot";
+        dot.setAttribute("role", "tab");
+        dot.setAttribute("aria-label", `Go to case study ${i + 1}`);
+        dot.addEventListener("click", () => csGoTo(i));
+        csDotsWrap.appendChild(dot);
+      });
+      const csDots = $$(".slider__dot", csDotsWrap);
+
+      const csGetActiveIndex = () => {
+        const center = csTrack.scrollLeft + csTrack.clientWidth / 2;
+        let bestIdx = 0;
+        let bestDist = Infinity;
+        csSlides.forEach((s, i) => {
+          const c = s.offsetLeft + s.offsetWidth / 2;
+          const d = Math.abs(c - center);
+          if (d < bestDist) {
+            bestDist = d;
+            bestIdx = i;
+          }
+        });
+        return bestIdx;
+      };
+
+      const csUpdateDots = () => {
+        const i = csGetActiveIndex();
+        csDots.forEach((d, idx) => d.classList.toggle("is-active", idx === i));
+      };
+
+      const csGoTo = (i) => {
+        const idx = (i + csSlides.length) % csSlides.length;
+        const target = csSlides[idx];
+        const left = target.offsetLeft - (csTrack.clientWidth - target.offsetWidth) / 2;
+        csTrack.scrollTo({ left, behavior: "smooth" });
+      };
+
+      csPrev.addEventListener("click", () => csGoTo(csGetActiveIndex() - 1));
+      csNext.addEventListener("click", () => csGoTo(csGetActiveIndex() + 1));
+
+      let csScrollTimer;
+      csTrack.addEventListener(
+        "scroll",
+        () => {
+          window.clearTimeout(csScrollTimer);
+          csScrollTimer = window.setTimeout(csUpdateDots, 80);
+        },
+        { passive: true }
+      );
+
+      csUpdateDots();
+
+      let csAuto = window.setInterval(() => csGoTo(csGetActiveIndex() + 1), 8000);
+      const csStopAuto = () => {
+        window.clearInterval(csAuto);
+        csAuto = null;
+      };
+      const csStartAuto = () => {
+        if (!csAuto) csAuto = window.setInterval(() => csGoTo(csGetActiveIndex() + 1), 8000);
+      };
+      csSlider.addEventListener("mouseenter", csStopAuto);
+      csSlider.addEventListener("mouseleave", csStartAuto);
+      csSlider.addEventListener("focusin", csStopAuto);
+      csSlider.addEventListener("focusout", csStartAuto);
+
+      csSlider.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowLeft") csGoTo(csGetActiveIndex() - 1);
+        if (e.key === "ArrowRight") csGoTo(csGetActiveIndex() + 1);
+      });
+    }
+  }
+
   /* ------------------ FAQ accordion behaviour ------------------ */
   const faqItems = $$(".faq__item");
   faqItems.forEach((item) => {
@@ -192,6 +276,7 @@
     ".why__copy",
     ".price-tile",
     ".review",
+    ".case-slide",
     ".faq__item",
     ".final__inner > *"
   ];
